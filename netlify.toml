@@ -1,8 +1,8 @@
-[functions]
-  external_node_modules = ["express", "cookie-parser", "debug", "http-errors", "jade", "morgan"]
-  node_bundler = "esbuild"
+[build]
+  command = "npm run build"
+  functions = ".netlify/functions/"
 [[redirects]]
   force = true
   from = "/*"
   status = 200
-  to = "/.netlify/functions/express/:splat"
+  to = "/.netlify/functions/serverless/:splat"
